@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Comment -->
+
+<html>
+<head>
+	<title>Javascript</title>
+	<link rel="stylesheet" href="style1.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+			var votes = 0;
+
+			function upvote () {
+				votes = votes + 1;
+				$ ('#votes').text(votes);
+			}
+
+			function downvote () {
+				votes = votes - 1;
+				$ ('#votes').text(votes);
+			}
+
+			function changecolour(){
+				$('body').css('background-color', 'red');
+			}
+
+			function convert() {
+				var cel = $('#celsius').val();
+				var farenheit = cel*9/5+32;
+				$('#farenheit').val(farenheit);
+			}
+
+	</script>
+</head>
+<body>
+	<h1 id="votes">0</h1>
+		<label>Celsius  </label><input id='celsius' type='text'><br><br>
+		<label>Farenheit  </label><input id='farenheit' type='text'><br><br>
+
+
+		<button onclick="upvote()" style="width:150px;" class="btn btn-primary">+1</button>
+		<button onclick="downvote()" style="width:150px;" class="btn btn-danger">-1</button>
+
+		<button onclick="convert()" class="brn brn-warning">Convert</button>
+</body>
+
+</html>
